@@ -11,8 +11,5 @@ namespace Repository.Repositories.Interfaces
         void Update(T data);
         void Delete(T data);
         T Get(Predicate<T> predicate);
-        List<T> GetAll(Predicate<T> predicate);
-
-
     }
 }

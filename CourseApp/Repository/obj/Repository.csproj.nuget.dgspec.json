@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Repository\\Repository.csproj": {}
+    "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Domain\\Domain.csproj": {
+    "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\saadatam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\OMEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saadatam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OMEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,21 +54,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Repository\\Repository.csproj": {
+    "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\saadatam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\OMEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saadatam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OMEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\saadatam\\source\\repos\\C#_ConsoleProject\\CourseApp\\Domain\\Domain.csproj"
+              "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\OMEN\\Desktop\\Project\\ConsoleProjects1\\CourseApp\\Domain\\Domain.csproj"
               }
             }
           }
@@ -112,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
         }
       }
     }

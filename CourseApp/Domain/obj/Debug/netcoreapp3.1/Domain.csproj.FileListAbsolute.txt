@@ -1,0 +1,10 @@
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.AssemblyReference.cache
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Users\OMEN\Desktop\Project\ConsoleProjects1\CourseApp\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

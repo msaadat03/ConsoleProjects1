@@ -26,6 +26,8 @@ namespace Repository.Repositories
             }
         }
 
+       
+
         public void Delete(Group data)
         {
             throw new NotImplementedException();
@@ -33,12 +35,7 @@ namespace Repository.Repositories
 
         public Group Get(Predicate<Group> predicate)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Group> GetAll(Predicate<Group> predicate)
-        {
-            throw new NotImplementedException();
+            return predicate != null ? AppDbContext<Group>.datas.Find(predicate) : null; 
         }
 
         public void Update(Group data)
@@ -47,3 +44,6 @@ namespace Repository.Repositories
         }
     }
 }
+
+
+        

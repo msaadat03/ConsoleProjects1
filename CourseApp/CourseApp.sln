@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseApp", "CourseApp\CourseApp.csproj", "{FA1A9424-6482-43E1-A8BA-C87C81C3A2DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseApp", "CourseApp\CourseApp.csproj", "{FA1A9424-6482-43E1-A8BA-C87C81C3A2DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{7E3D54B5-BF4B-40E7-8CCA-CF19885055DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{7E3D54B5-BF4B-40E7-8CCA-CF19885055DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{03049A98-58AA-4611-91C6-F9CEE6A7714B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{03049A98-58AA-4611-91C6-F9CEE6A7714B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{2E5D8F5E-A045-49ED-900D-D5F674FE9378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{2E5D8F5E-A045-49ED-900D-D5F674FE9378}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
