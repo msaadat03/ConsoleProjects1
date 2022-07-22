@@ -11,7 +11,7 @@ namespace CourseApp
         {
             GroupService groupService = new GroupService();
             Helper.WriteConsole(ConsoleColor.Yellow, "Select one option :");
-            Helper.WriteConsole(ConsoleColor.Magenta, "1 - Create group; 2 - Get group by id; 3 - Update group; 4 - Delete group; 5 - Get All Groups; 6 - Create Student" );
+            Helper.WriteConsole(ConsoleColor.Magenta, "1 - Create group; 2 - Get group by id; 3 - Update group; 4 - Delete group; 5 - Get All Groups; 6 - Create Student; 7 - Get All Group By Teacher; 8 - Get All Group By Room; 9 - Get All Group; 10 - Search Group By Name");
         while (true)
         {
                 SelectOption: string selectoption = Console.ReadLine();
@@ -44,15 +44,42 @@ namespace CourseApp
                                     Room = GroupRoom
                                 };
 
-                                var result = groupService.Create(group);
+                                var result = groupService.CreateGroup(group);
                                 Helper.WriteConsole(ConsoleColor.Green, $"Group id : {result.Id}, Group name: {result.Name}, Teacher: {result.Teacher}, Group Room: {result.Room}");
 
                             }
 
 
                             break;
+
                         case 2:
-                            Console.WriteLine(selectTrueOption);
+                            Helper.WriteConsole(ConsoleColor.Yellow, "Add group id :");
+                            GroupId: string groupId = Console.ReadLine();
+                            int id;
+                            bool isGroupId = int.TryParse(groupId, out id);
+
+                            if (isGroupId)
+                            {
+                                Group group = groupService.GetGroupById(id);
+                                if(group != null)
+                                {
+                                    Helper.WriteConsole(ConsoleColor.Green, $"Group id : {group.Id}, Group name: {group.Name}, Teacher: {group.Teacher}, Group Room: {group.Room}");
+
+                                }
+                                else
+                                {
+
+                                    Helper.WriteConsole(ConsoleColor.Yellow, "Group not found");
+                                    goto GroupId;
+
+                                }
+                            }
+                            else
+                            {
+                                Helper.WriteConsole(ConsoleColor.Red, "Select correct id type :");
+                                goto GroupId;
+                            }
+
                             break;
                         case 3:
                             Console.WriteLine(selectTrueOption);

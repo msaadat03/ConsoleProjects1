@@ -7,11 +7,16 @@ namespace Service.Services.Interfaces
 {
     public interface IGroupService
     {
-        Group Create(Group group);
-        Group Update(int id, Group group);
-        void Delete(int id);
-        Group GetById(int id);
-        List<Group> GetAll();
+        Group CreateGroup(Group group);
+        Group UpdateGroup(int id, Group group);
+        void DeleteGroup(int id);
+        Group GetGroupById(int id);
+        List<Group> GetAllGroupByTeacher(string teacher);
+        List<Group> GetAllGroupByRoom(string room);
+        List<Group> GetAllGroup();
+        List<Group> SearchGroupByName(string search);
+
+
 
 
 

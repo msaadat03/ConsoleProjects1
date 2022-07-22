@@ -7,15 +7,14 @@ namespace Service.Services
 {
     public class GroupService : IGroupService
     {
-    
+
         private GroupRepository _grouprepository;
         private int _count;
         public GroupService()
         {
             _grouprepository = new GroupRepository();
         }
-
-        public Group Create(Group group)
+        public Group CreateGroup(Group group)
         {
             group.Id = _count;
             _grouprepository.Create(group);
@@ -24,28 +23,44 @@ namespace Service.Services
         }
 
 
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
-        }
+            public void DeleteGroup(int id)
+            {
+                throw new System.NotImplementedException();
+            }
 
-        public List<Group> GetAll()
-        {
-            throw new System.NotImplementedException();
-        }
+            public List<Group> GetAllGroup()
+            {
+                throw new System.NotImplementedException();
+            }
 
-        public Group GetById(int id)
-        {
+            public List<Group> GetAllGroupByRoom(string room)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public List<Group> GetAllGroupByTeacher(string teacher)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public Group GetGroupById(int id)
+            {
             var group = _grouprepository.Get(m => m.Id == id);
             if (group is null) return null;
             return group;
-        
-    }
+            }
 
-        public Group Update(int id, Group group)
-        {
-            throw new System.NotImplementedException();
+            public List<Group> SearchGroupByName(string search)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public Group UpdateGroup(int id, Group group)
+            {
+                throw new System.NotImplementedException();
+            }
         }
     }
-}
+
+
        
