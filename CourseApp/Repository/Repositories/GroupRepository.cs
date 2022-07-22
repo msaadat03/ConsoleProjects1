@@ -38,6 +38,11 @@ namespace Repository.Repositories
             return predicate != null ? AppDbContext<Group>.datas.Find(predicate) : null; 
         }
 
+        public List<Group> GetAll(Predicate<Group> predicate = null)
+        {
+            return predicate != null ? AppDbContext<Group>.datas.FindAll(predicate) : AppDbContext<Group>.datas;
+        }
+
         public void Update(Group data)
         {
             throw new NotImplementedException();

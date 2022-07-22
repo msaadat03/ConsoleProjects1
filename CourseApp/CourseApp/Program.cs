@@ -2,6 +2,7 @@
 using Service.Helpers;
 using Service.Services;
 using System;
+using System.Collections.Generic;
 
 namespace CourseApp
 {
@@ -12,7 +13,9 @@ namespace CourseApp
             GroupService groupService = new GroupService();
             Helper.WriteConsole(ConsoleColor.Yellow, "Select one option :");
             Helper.WriteConsole(ConsoleColor.Magenta, "1 - Create group; 2 - Get group by id; 3 - Update group; 4 - Delete group; 5 - Get All Groups; 6 - Create Student; 7 - Get All Group By Teacher; 8 - Get All Group By Room; 9 - Get All Group; 10 - Search Group By Name");
-        while (true)
+       
+            
+            while (true)
         {
                 SelectOption: string selectoption = Console.ReadLine();
 
@@ -86,6 +89,43 @@ namespace CourseApp
                             break;
                         case 4:
                             Console.WriteLine(selectTrueOption);
+                            break;
+                        case 5:
+                            List<Group> groups = groupService.GetAllGroup();
+                            foreach (var item in groups)
+                            {
+                                Helper.WriteConsole(ConsoleColor.Green, $"Group id : {item.Id}, Group name: {item.Name}, Teacher: {item.Teacher}, Group Room: {item.Room}");
+                            }
+                            break;
+                        case 6:
+                            Console.WriteLine(selectTrueOption);
+                            break;
+                        case 7:
+                            Console.WriteLine(selectTrueOption);
+                            break;
+                        case 8:
+                            Console.WriteLine(selectTrueOption);
+                            break;
+                        case 9:
+                            Console.WriteLine(selectTrueOption);
+                            break;
+                        case 10:
+                            Helper.WriteConsole(ConsoleColor.Yellow, "Add group serach group by name :");
+                            SearchGroup: string search = Console.ReadLine();
+
+                            List<Group> resultgroup = groupService.SearchGroupByName(search);
+                            if (resultgroup !=null)
+                            {
+                                foreach (var item in resultgroup)
+                                {
+                                    Helper.WriteConsole(ConsoleColor.Green, $"Group id : {item.Id}, Group name: {item.Name}, Teacher: {item.Teacher}, Group Room: {item.Room}");
+                                }
+                            }
+                            else
+                            {
+                                Helper.WriteConsole(ConsoleColor.Red, "Library not found");
+                                goto SearchGroup;
+                            }
                             break;
                         default:
                         Helper.WriteConsole(ConsoleColor.Yellow, "Select correct option number!");

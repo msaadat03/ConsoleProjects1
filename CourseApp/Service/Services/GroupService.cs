@@ -1,6 +1,7 @@
 ﻿using Domain.Models;
 using Repository.Repositories;
 using Service.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace Service.Services
@@ -30,7 +31,7 @@ namespace Service.Services
 
             public List<Group> GetAllGroup()
             {
-                throw new System.NotImplementedException();
+            return _grouprepository.GetAll();
             }
 
             public List<Group> GetAllGroupByRoom(string room)
@@ -52,14 +53,14 @@ namespace Service.Services
 
             public List<Group> SearchGroupByName(string search)
             {
-                throw new System.NotImplementedException();
+              return _grouprepository.GetAll(m => m.Name.Trim().ToLower().StartsWith(search.Trim().ToLower()));
             }
 
-            public Group UpdateGroup(int id, Group group)
+        public Group UpdateGroup(int id, Group group)
             {
                 throw new System.NotImplementedException();
             }
-        }
+    }
     }
 
 
