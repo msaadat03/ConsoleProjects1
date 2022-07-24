@@ -30,7 +30,7 @@ namespace Repository.Repositories
 
         public void Delete(Group data)
         {
-            throw new NotImplementedException();
+            AppDbContext<Group>.datas.Remove(data);
         }
 
         public Group Get(Predicate<Group> predicate)
@@ -45,7 +45,15 @@ namespace Repository.Repositories
 
         public void Update(Group data)
         {
-            throw new NotImplementedException();
+            Group group = Get(m => m.Id == data.Id);
+            if(string.IsNullOrEmpty(data.Name))
+            group.Name = data.Name;
+
+            if (string.IsNullOrEmpty(data.Name))
+            group.Teacher = data.Teacher;
+
+            if (string.IsNullOrEmpty(data.Name))
+            group.Room = data.Room;
         }
     }
 }

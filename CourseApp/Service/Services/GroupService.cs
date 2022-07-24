@@ -26,7 +26,8 @@ namespace Service.Services
 
             public void DeleteGroup(int id)
             {
-                throw new System.NotImplementedException();
+            Group group = GetGroupById(id);
+            _grouprepository.Delete(group);
             }
 
             public List<Group> GetAllGroup()
@@ -58,7 +59,11 @@ namespace Service.Services
 
         public Group UpdateGroup(int id, Group group)
             {
-                throw new System.NotImplementedException();
+            Group dbGroup = GetGroupById(id);
+            if (dbGroup is null) return null;
+            group.Id = dbGroup.Id;
+            _grouprepository.Update(group);
+            return dbGroup;
             }
     }
     }
