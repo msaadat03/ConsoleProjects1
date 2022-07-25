@@ -1,110 +1,96 @@
 ﻿using CourseApp.Controllers;
-using Domain.Models;
 using Service.Helpers;
 using Service.Services;
 using System;
-using System.Collections.Generic;
 
 namespace CourseApp
 {
+
     public class Program
     {
+        private static GroupController _groupController;
+        private static StudentController _studentController;
+
         static void Main(string[] args)
         {
             GroupService groupService = new GroupService();
-            GroupController groupController = new GroupController();
-            Helper.WriteConsole(ConsoleColor.Yellow, "Select one option :");
+            _groupController = new GroupController(groupService);
+            _studentController = new StudentController(groupService, new StudentService());
 
             GetMenues();
-       
-            while (true)
-        {
-                SelectOption: string selectoption = Console.ReadLine();
+            Helper.WriteConsole(ConsoleColor.Yellow, "Select one option :");
 
+            while(true)
+            {
+                SelectOption: 
+                string selectoption = Console.ReadLine();
                 int selectTrueOption;
 
                 bool isSelectOption = int.TryParse(selectoption, out selectTrueOption);
 
-                if (isSelectOption )
+                if (isSelectOption)
                 {
                     switch (selectTrueOption)
                     {
 
                         case (int)Menues.CreateGroup:
-                            groupController.Create();
+                            _groupController.Create();
                             break;
-
 
                         case (int)Menues.UpdateGroup:
-                            groupController.Update();
+                            _groupController.Update();
                             break;
-
 
                         case (int)Menues.DeleteGroup:
-                            groupController.Delete();
+                            _groupController.Delete();
                             break;
-
 
                         case (int)Menues.GetGroupById:
-                            groupController.GetById();
+                            _groupController.GetById();
                             break;
-
 
                         case (int)Menues.GetAllGroupByTeacher:
-                            Console.WriteLine(selectTrueOption);
+                            _groupController.GetByTeacher();
                             break;
-
 
                         case (int)Menues.GetAllGroupByRoom:
-                            Console.WriteLine(selectTrueOption);
+                            _groupController.GetByRoom();
                             break;
-
-
 
                         case (int)Menues.GetAllGroups:
-                            groupController.GetAll();
+                            _groupController.GetAll();
                             break;
-
-
 
                         case (int)Menues.SearchGroupsByName:
-                            groupController.SearchByName();
+                            _groupController.SearchByName();
                             break;
-
-
 
                         case (int)Menues.CreateStudent:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.Create();
                             break;
-
 
                         case (int)Menues.UpdateStudent:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.Update();
                             break;
-
 
                         case (int)Menues.DeleteStudent:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.Delete();
                             break;
-
 
                         case (int)Menues.GetStudentById:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.GetById();
                             break;
-
 
                         case (int)Menues.GetStudentByAge:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.GetByAge();
                             break;
-
 
                         case (int)Menues.GetAllStudentsByGroupId:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.GetByGroupId();
                             break;
 
-
                         case (int)Menues.SearchStudentsByNameOrSurname:
-                            Console.WriteLine(selectTrueOption);
+                            _studentController.SearchByName();
                             break;
 
 
@@ -118,8 +104,8 @@ namespace CourseApp
                     Helper.WriteConsole(ConsoleColor.Red, "Select one option :");
                     goto SelectOption;
                 }
-         }
-        
+            }
+
         }
 
         private static void GetMenues()

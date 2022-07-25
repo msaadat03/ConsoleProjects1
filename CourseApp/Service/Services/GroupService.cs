@@ -6,67 +6,76 @@ using System.Collections.Generic;
 
 namespace Service.Services
 {
-    public class GroupService : IGroupService
+    public class GroupService 
     {
+        private GroupRepository _groupRepository;
+        private static int _count; 
 
-        private GroupRepository _grouprepository;
-        private int _count;
         public GroupService()
         {
-            _grouprepository = new GroupRepository();
+          
+            _groupRepository = new GroupRepository();
         }
-        public Group CreateGroup(Group group)
+
+       
+
+      
+
+        public void CreateGroup(Group group)
         {
-            group.Id = _count;
-            _grouprepository.Create(group);
-            _count++;
-            return group;
+            if (group == null)
+                throw new ArgumentNullException("group");
+
+            group.Id = ++_count;
+            _groupRepository.Create(group);
         }
 
-
-            public void DeleteGroup(int id)
-            {
-            Group group = GetGroupById(id);
-            _grouprepository.Delete(group);
-            }
-
-            public List<Group> GetAllGroup()
-            {
-            return _grouprepository.GetAll();
-            }
-
-            public List<Group> GetAllGroupByRoom(string room)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            public List<Group> GetAllGroupByTeacher(string teacher)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            public Group GetGroupById(int id)
-            {
-            var group = _grouprepository.Get(m => m.Id == id);
-            if (group is null) return null;
-            return group;
-            }
-
-            public List<Group> SearchGroupByName(string search)
-            {
-              return _grouprepository.GetAll(m => m.Name.Trim().ToLower().StartsWith(search.Trim().ToLower()));
-            }
-
-        public Group UpdateGroup(int id, Group group)
-            {
+        public Group Update(int id, Group group)
+        {
             Group dbGroup = GetGroupById(id);
             if (dbGroup is null) return null;
             group.Id = dbGroup.Id;
-            _grouprepository.Update(group);
-            return dbGroup;
+            _groupRepository.Update(group);
+            return group;
             }
+
+
+        public void DeleteGroup(int id)
+        {
+            Group group = _groupRepository.GetById(id);
+            _groupRepository.Delete(group);
+        }
+
+        public List<Group> GetAllGroups()
+        {
+            return _groupRepository.GetAll();
+        }
+
+        public Group GetGroupById(int id)
+        {
+            var group = _groupRepository.Get(m => m.Id == id);
+            if (group is null) return null;
+            return group;
+        }
+
+        public List<Group> GetAllGroupsByRoom(string room)
+        {
+            return _groupRepository.GetAll(m => m.Room.Trim().ToLower() == (room.Trim().ToLower()));
+
+        }
+
+        public List<Group> GetAllGroupsByTeacher(string teacher)
+        {
+            return _groupRepository.GetAll(m => m.Teacher.Trim().ToLower() == (teacher.Trim().ToLower()));
+        }
+
+        public List<Group> SearchGroupByName(string search)
+        {
+            return _groupRepository.GetAll(group => group.Name.Contains(search, StringComparison.OrdinalIgnoreCase));
+        }
+
     }
-    }
+}
 
 
        

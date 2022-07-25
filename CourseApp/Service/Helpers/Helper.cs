@@ -17,6 +17,7 @@ namespace Service.Helpers
 
     public enum Menues
     {
+        Exit = 0,
         CreateGroup = 1,
         UpdateGroup = 2,
         DeleteGroup = 3,

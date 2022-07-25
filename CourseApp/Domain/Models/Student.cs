@@ -1,7 +1,4 @@
 ﻿using Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Domain.Models
 {
@@ -12,5 +9,9 @@ namespace Domain.Models
         public int Age { get; set; }
         public Group Group { get; set; }
 
+        public override string ToString()
+        {
+            return $"Student Id: {Id}; Name: {Name}; Surname: {Surname}; Age: {Age}; Group [{(Group == null ? "<Empty>" : Group.ToString())}]";
+        }
     }
 }
